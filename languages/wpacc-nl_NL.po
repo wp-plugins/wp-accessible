@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Accessible\n"
+"POT-Creation-Date: 2012-10-30 01:41+0100\n"
+"PO-Revision-Date: 2012-10-30 01:41+0100\n"
+"Last-Translator: Rian Rietveld <rian@rrwd.nl>\n"
+"Language-Team: RRWD <rian@rrwd.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: ./\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:46
+msgid "Display a list of your latest tweets."
+msgstr "Toon de nieuwste tweets"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:55
+msgid "WP-Accessible - Latest Tweets"
+msgstr "WP-Accessible - Nieuwste Tweets"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:93
+msgid "The Twitter API is taking too long to respond. Please try again later."
+msgstr ""
+"De Twitter API neemt teveel tijd om te antwoorden. Probeer het opnieuw."
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:96
+msgid ""
+"There was an error while attempting to contact the Twitter API. Please try "
+"again."
+msgstr "De connectie met de twitter API lukt niet, probeer het opnieuw."
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:99
+msgid ""
+"The Twitter API returned an error while processing your request. Please try "
+"again."
+msgstr "De twitter API gaf een foutmelding, probeer het opnieuw."
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:172
+msgid "Title"
+msgstr "Titel"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:177
+msgid "Twitter Username"
+msgstr "Twitter gebruikersnaam"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:182
+msgid "Number of Tweets to Show"
+msgstr "Aantal te tonen tweets"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:188
+msgid "Hide @ Replies"
+msgstr "Verberg @ Replies"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:192
+msgid "Load new Tweets every"
+msgstr "Laad nieuwe Tweets elke"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:194
+msgid "5 Min."
+msgstr "5 minuten"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:195
+msgid "15 Minutes"
+msgstr "15 minuten"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:196
+msgid "30 Minutes"
+msgstr "30 minuten"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:197
+msgid "1 Hour"
+msgstr "1 uur"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:198
+msgid "2 Hours"
+msgstr "2 uur"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:199
+msgid "4 Hours"
+msgstr "4 uur"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:200
+msgid "12 Hours"
+msgstr "12 uur"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:201
+msgid "24 Hours"
+msgstr "24 uur"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:207
+msgid "Include link to twitter page?"
+msgstr "Voeg link naar Twitterpagina toe?"
+
+#: ../lib/widgets/wpacc-accessible-twitter-feed-widget.php:211
+msgid "Link Text (required)"
+msgstr "Link tekst (verplicht)"
