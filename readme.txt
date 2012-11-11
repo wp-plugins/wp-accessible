@@ -1,6 +1,6 @@
 === WP Accessible ===
 Contributors: rianrietveld
-Donate link: http://wp-accessible.com/
+Donate link: http://wp-accessible.org/
 Tags: twitter, tweets, accessible, WCAG
 Requires at least: 3.0
 Tested up to: 3.5
