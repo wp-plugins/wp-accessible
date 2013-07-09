@@ -4,7 +4,7 @@
 	Plugin URI: http://wp-accessible.org
 	Description: This plugin adds functionality and plugins to improve the accessibility of WordPress.
 
-	Version: 0.1
+	Version: 0.2
 	Author: Rian Rietveld
 	Author URI: http://rrwd.nl
 	License: GPLv2 or later
