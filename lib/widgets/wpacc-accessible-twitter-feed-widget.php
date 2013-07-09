@@ -21,8 +21,8 @@ Version 0.1 Changes made to Genesis_Latest_Tweets_Widget version 0.1.8 with the 
 - included a .pot file and dutch .po/.mo files
 */
 
-require('StormTwitter.class.php');
-require('wp-accessible-twitter-oauth-settings.php');
+require('wpacc-stormtwitter.php');
+require('wpacc-twitter-oauth-settings.php');
 
 /**
  * WP-Accessible Latest Tweets widget class.
