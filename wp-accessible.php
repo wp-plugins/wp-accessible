@@ -4,7 +4,7 @@
 	Plugin URI: http://wp-accessible.org
 	Description: This plugin adds functionality and plugins to improve the accessibility of WordPress.
 
-	Version: 0.1
+	Version: 0.2
 	Author: Rian Rietveld
 	Author URI: http://rrwd.nl
 	License: GPLv2 or later
@@ -38,7 +38,7 @@ define( 'WPACC_FILE', __FILE__ );
 /** Include language files */
 load_plugin_textdomain( 'wpacc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
-define( 'WPACC_VERSION', '0.1' );
+define( 'WPACC_VERSION', '0.2' );
  
 /** Load the Library */
 require WPACC_PATH.'lib/init.php';
