@@ -1,14 +1,14 @@
-=== WP Accessible ===
+=== WP Accessible Twitter Feed ===
 Contributors: rianrietveld
 Donate link: http://wp-accessible.org/
-Tags: twitter, tweets, accessible, WCAG
+Tags: twitter, tweets, accessible, accessibility, WCAG, WCAG 2
 Requires at least: 3.0
-Tested up to: 3.5.2
-Stable tag: 0.2.3
+Tested up to: 4.1
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin adds functionality to improve the Accessibility of WordPress. At the moment only an accessible Twitter feed widget.
+This plugin adds an accessible Twitter feed widget, compiant with WCAG 2, requires PHP5.
 == Description ==
 
 A widget with an accessible Twitter feed. Validates for WCAG 2.0. This plugin requires PHP5.
@@ -28,9 +28,16 @@ How to get the authorization keys and tokes:
 - agree on the Rules Of The Road
 - fill out the CAPTCHA
 - select Create my access token
-- copy/paste the keys and tokens in the WordPress menu item Settings -> Twitter Feed Auth 
+- copy/paste the keys and tokens in the WordPress menu item Settings -> Twitter Feed Auth
 
 == Changelog ==
+
+= 1.0 =
+
+* fixed bug Undefined index: twitter_duration
+* fixed bug Undefined index: twitter_include_rts
+* changed name plugin from WP Accessible into WP Accessible Twitter Feed
+
 
 = 0.2 =
 

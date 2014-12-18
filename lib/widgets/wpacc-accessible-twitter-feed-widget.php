@@ -1,24 +1,25 @@
 <?php
 /**
-WP Accessible Twitter feed
-Description:  A widget with an Accessible twitter feed, based on the native Genesis Framework Widget by StudioPress. Works without Genesis Framework. Validates for WCAG 2.0
-/**
-Version 0.2
-- added Twitter API 1.1 authentication, using oAuth Twitter Feed for Developers by Storm Consultancy (Liam Gladdy) and the OAuth lib. You can find that at http://oauth.net
-- added time posted of the tweet
-- You can downlaod this widget as standalone plugin at the GitHub: 
-*/
-
-/**
-Version 0.1 Changes made to Genesis_Latest_Tweets_Widget version 0.1.8 with the 1.8.2 framework:
-- stand alone widget
-- included function genesis_tweet_linkify, renamed it wp_accessible_tweet_linkify
-- removed target is _blank for links, so they don't open in a new window
-- removed title attribute in links (messes up screan reader output)
-- removed links on hashtags to prevent a overload of links for a tweet
-- removed the timestamp/link to prevent a overload of links for a tweet
-- removed inline style for font-size
-- included a .pot file and dutch .po/.mo files
+ * WP Accessible Twitter feed
+ * Description: A widget with an Accessible twitter feed, based on the native Genesis Framework Widget by StudioPress. Works without Genesis Framework. Validates for WCAG 2.0
+ *
+ * Version 1.0
+ * - Fixed bug Undefined index: twitter_duration
+ * - Fixed bug Undefined index: twitter_include_rts
+ *
+ * Version 0.2
+ * - added Twitter API 1.1 authentication, using oAuth Twitter Feed for Developers by Storm Consultancy (Liam Gladdy) and the OAuth lib. You can find that at http://oauth.net
+ * - added time posted of the tweet
+ *
+ * Version 0.1 Changes made to Genesis_Latest_Tweets_Widget version 0.1.8 with the 1.8.2 framework:
+ * - stand alone widget
+ * - included function genesis_tweet_linkify, renamed it wp_accessible_tweet_linkify
+ * - removed target is _blank for links, so they don't open in a new window
+ * - removed title attribute in links (messes up screan reader output)
+ * - removed links on hashtags to prevent a overload of links for a tweet
+ * - removed the timestamp/link to prevent a overload of links for a tweet
+ * - removed inline style for font-size
+ * - included a .pot file and dutch .po/.mo files
 */
 
 require('wpacc-stormtwitter.php');
@@ -48,8 +49,10 @@ class WPACC_Latest_Tweets_Widget extends WP_Widget {
 			'twitter_id'           => '',
 			'twitter_num'          => '',
 			'twitter_hide_replies' => 0,
+			'twitter_include_rts'  => 0,
 			'follow_link_show'     => 0,
 			'follow_link_text'     => '',
+			'twitter_duration'     => '3600',
 		);
 
 		$widget_ops = array(
@@ -89,26 +92,18 @@ class WPACC_Latest_Tweets_Widget extends WP_Widget {
 
 		$options['exclude_replies'] =  $instance['twitter_hide_replies'];
 		$options['include_rts'] =  $instance['twitter_include_rts'];
-		
+
 		$rawtweets = wpacc_getTweets($instance['twitter_num'], $instance['twitter_id'], $options);
-	
+
 		/** Build the tweets array */
 		$tweets = array();
 		foreach ( $rawtweets as $tweet ) {
-	
-			/** Don't include @ replies (if applicable) */
-			//if ( $instance['twitter_hide_replies'] && $tweet['in_reply_to_user_id'] )
-			//			continue;
-					
-			
+
 			$timeago = sprintf( __( 'about %s ago', 'wpacc' ), human_time_diff( strtotime( $tweet['created_at'] ) ) );
 			$timetweet = sprintf( '%s', esc_html( $timeago ) );
 			// $timetweet = strtotime( $tweet['created_at'] );
 			// $timetweet = date_i18n( 'j F Y', $timetweet, false )
-					
-			
-			
-			
+
 			/** Add tweet to array */
 			$tweets[] = '<li>' . wpacc_tweet_linkify( $tweet['text'] ) . ' - <span class="wpacc-tweet-time">' . $timetweet . '</span></li>' . "\n";
 		}
@@ -121,20 +116,18 @@ class WPACC_Latest_Tweets_Widget extends WP_Widget {
 
 		$time = ( absint( $instance['twitter_duration'] ) * 60 );
 
-				
+
 		foreach( $tweets as $tweet )
 			echo $tweet;
-			
-
 
 		echo '</ul>' . "\n";
-		
+
 		echo $after_widget;
 
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Update a particular instance.
 	 *
@@ -247,10 +240,10 @@ function wpacc_getTweets($count = 20, $username = false, $options = false) {
   $config['cache_expire'] = intval(get_option('wpacc_tdf_cache_expire'));
   if ($config['cache_expire'] < 1) $config['cache_expire'] = 3600;
   $config['directory'] = plugin_dir_path(__FILE__);
-  
+
   $obj = new StormTwitter($config);
   $res = $obj->getTweets($count, $username, $options);
   update_option('wpacc_tdf_last_error',$obj->st_last_error);
   return $res;
-  
+
 }
