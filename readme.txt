@@ -28,7 +28,7 @@ How to get the authorization keys and tokes:
 - agree on the Rules Of The Road
 - fill out the CAPTCHA
 - select Create my access token
-- copy/paste the keys and tokens in the WordPress menu item Settings -> Twitter Feed Auth 
+- copy/paste the keys and tokens in the WordPress menu item Settings -> Twitter Feed Auth
 
 == Changelog ==
 

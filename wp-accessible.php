@@ -13,7 +13,7 @@
 /*  Copyright 2012 Rian Rietveld  (email : rian@rrwd.nl)
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -29,7 +29,7 @@
 /**
  * @package Main
  */
- 
+
 if ( !defined('WPACC_URL') ) define( 'WPACC_URL', plugin_dir_url( __FILE__ ) );
 if ( !defined('WPACC_PATH') ) define( 'WPACC_PATH', plugin_dir_path( __FILE__ ) );
 if ( !defined('WPACC_BASENAME') ) define( 'WPACC_BASENAME', plugin_basename( __FILE__ ) );
@@ -39,6 +39,6 @@ define( 'WPACC_FILE', __FILE__ );
 load_plugin_textdomain( 'wpacc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
 define( 'WPACC_VERSION', '0.2.2' );
- 
+
 /** Load the Library */
 require WPACC_PATH.'lib/init.php';
