@@ -1,10 +1,9 @@
 <?php
 /**
  * Plugin Name: WP Accessible Twitter Feed
- * Plugin URI: http://wp-accessible.org
  * Description: This plugin adds an accessible Twitter feed widget compiant with WCAG 2.
  *
- * Version: 1.0
+ * Version: 1.1
  * Author: Rian Rietveld
  * Author URI: http://rianrietveld.com
  * License: GPLv2 or later

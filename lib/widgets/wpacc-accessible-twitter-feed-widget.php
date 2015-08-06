@@ -3,6 +3,9 @@
  * WP Accessible Twitter feed
  * Description: A widget with an Accessible twitter feed, based on the native Genesis Framework Widget by StudioPress. Works without Genesis Framework. Validates for WCAG 2.0
  *
+ * Version 1.1
+ * - Removed deprecated PHP style constructor
+ *
  * Version 1.0
  * - Fixed bug Undefined index: twitter_duration
  * - Fixed bug Undefined index: twitter_include_rts
@@ -66,7 +69,7 @@ class WPACC_Latest_Tweets_Widget extends WP_Widget {
 			'height'  => 250,
 		);
 
-		$this->WP_Widget( 'wpacc-latest-tweets', __( 'WP-Accessible - Latest Tweets', 'wpacc' ), $widget_ops, $control_ops );
+		parent::__construct( 'wpacc-latest-tweets', __( 'WP-Accessible - Latest Tweets', 'wpacc' ), $widget_ops, $control_ops );
 
 	}
 
